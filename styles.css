@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+}
+
+.spinner-sector {
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 15px solid transparent;
+  mix-blend-mode: overlay;
+}
+
+.spinner-text {
+  animation: text-opacity 3s ease-in-out infinite;
+  font-size: 2em;
+}
+
+.spinner-sector-blue {
+  animation: rotate 2s ease infinite;
+  border-top: 15px solid lightblue;
+}
+
+.spinner-sector-green {
+  animation: rotate 2s ease-in infinite;
+  border-top: 15px solid lightgreen;
+}
+
+.spinner-sector-red {
+  animation: rotate 2s ease-in-out infinite;
+  border-top: 15px solid lightcoral;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes text-opacity {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
